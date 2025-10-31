@@ -19,13 +19,13 @@ export const homeProjectsData = [
   },
   {
     id: 2,
-    title: "Gamerji – User Portal & Admin Panel",
+    title: "Gamerji ",
     category: "MERN stack Projects",
     img: Gamerji,
   },
   {
     id: 3,
-    title: "CCL Dashboard – CRM & ERP System",
+    title: "CCL Dashboard",
     category: "React Projects",
     img: CCL,
   },
@@ -89,13 +89,13 @@ export const projectsData = [
   },
   {
     id: 2,
-    title: "Gamerji – User Portal & Admin Panel",
+    title: "Gamerji",
     category: "MERN stack Projects",
     img: Gamerji,
   },
   {
     id: 3,
-    title: "CCL Dashboard – CRM & ERP System",
+    title: "CCL Dashboard",
     category: "React Projects",
     img: CCL,
   },
@@ -105,30 +105,31 @@ export const projectsData = [
     category: "React Projects",
     img: Bridgethings,
   },
-  {
-    id: 5,
-    title: "E-commerce with Admin Panel",
-    category: "MERN stack Projects",
-    img: Gamerji,
-  },
-  {
-    id: 6,
-    title: "GuestLogiQ – Hotel Management",
-    category: "React Projects",
-    img: GuestLogiQ,
-  },
-  {
-    id: 7,
-    title: "Applt – Mobile Store Preview App",
-    category: "React Projects",
-    img: Applt,
-  },
-  {
+    {
     id: 8,
     title: "Be conversive",
     category: "Micro Frontend Projects",
     img: Beconversive,
   },
+  // {
+  //   id: 5,
+  //   title: "E-commerce with Admin Panel",
+  //   category: "MERN stack Projects",
+  //   img: Gamerji,
+  // },
+  {
+    id: 6,
+    title: "GuestLogiQ",
+    category: "E-commerce Projects",
+    img: GuestLogiQ,
+  },
+  {
+    id: 7,
+    title: "Applt",
+    category: "E-commerce Projects",
+    img: Applt,
+  },
+
   {
     id: 9,
     title: "Parasol Filebeam",
@@ -140,6 +141,6 @@ export const projectsData = [
     title: "Scopify",
     category: "React Projects",
     img: Scopify,
-	height: 300
+	// height: 300
   },
 ];

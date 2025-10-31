@@ -34,7 +34,7 @@ const ProjectSingle = () => {
 				<ProjectHeader singleProjectData={singleProjectDataArr.find((project) => Number(project.id) === Number(id))} />
 				<ProjectGallery singleProjectData={singleProjectDataArr.find((project) => Number(project.id) === Number(id))} />
 				<ProjectInfo singleProjectData={singleProjectDataArr.find((project) => Number(project.id) === Number(id))} />
-				<ProjectRelatedProjects singleProjectData={singleProjectDataArr.find((project) => Number(project.id) === Number(id))} />
+				{/* <ProjectRelatedProjects singleProjectData={singleProjectDataArr.find((project) => Number(project.id) === Number(id))} /> */}
 			</div>
 		</motion.div>
 	);

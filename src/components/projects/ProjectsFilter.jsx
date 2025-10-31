@@ -1,8 +1,9 @@
 const selectOptions = [
 	'MERN stack Projects',
 	'Micro Frontend Projects',
+	'E-commerce Projects',
 	'React Projects',
-	'Angular Projects',
+	// 'Angular Projects',
 ];
 
 const ProjectsFilter = ({ setSelectProject }) => {

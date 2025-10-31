@@ -1,14 +1,60 @@
 import { useContext } from 'react';
 import SingleProjectContext from '../../context/SingleProjectContext';
+import {
+  FiFacebook,
+  FiInstagram,
+  FiLinkedin,
+  FiTwitter,
+  FiYoutube,
+  FiWhatsapp
+} from "react-icons/fi";
+import {
+	FaWhatsapp,
+	FaMedium
+} from "react-icons/fa";
 
 const ProjectInfo = ({singleProjectData}) => {
+const pageUrl = encodeURIComponent(window.location.href);
+  const pageTitle = encodeURIComponent("Check out this project!");
+const socialMediaList = [
+			{
+		  id: 4,
+		  name: "LinkedIn",
+		  icon: <FiLinkedin />,
+		  url: `https://www.linkedin.com/shareArticle?mini=true&url=${pageUrl}&title=${pageTitle}`,
+		},
+		{
+		  id: 1,
+		  name: "Twitter",
+		  icon: <FiTwitter />,
+		  url: `https://twitter.com/intent/tweet?url=${pageUrl}&text=${pageTitle}`,
+		},
+		// {
+		//   id: 5,
+		//   name: "Medium",
+		//   icon: <FaMedium />,
+		//   url: `https://twitter.com/intent/tweet?url=${pageUrl}&text=${pageTitle}`,
+		// },
+		{
+		  id: 3,
+		  name: "Facebook",
+		  icon: <FiFacebook />,
+		  url: `https://www.facebook.com/sharer/sharer.php?u=${pageUrl}&t=${pageTitle}`,
+		},
 
+		{
+		  id: 6,
+		  name: "WhatsApp",
+		  icon: <FaWhatsapp />,
+		  url: `https://api.whatsapp.com/send?text=${pageTitle}%20${pageUrl}`,
+		},
+	  ];
 	return (
 		<div className="block sm:flex gap-0 sm:gap-10 mt-14">
 			<div className="w-full sm:w-1/3 text-left">
 				{/* Single project client details */}
-				<div className="mb-7">
-					<p className="font-general-regular text-2xl font-semibold text-secondary-dark dark:text-secondary-light mb-2">
+				{/*<div className="mb-7">
+					 <p className="font-general-regular text-2xl font-semibold text-secondary-dark dark:text-secondary-light mb-2">
 						{singleProjectData?.ProjectInfo?.ClientHeading}
 					</p>
 					<ul className="leading-loose">
@@ -37,17 +83,17 @@ const ProjectInfo = ({singleProjectData}) => {
 							}
 						)}
 					</ul>
-				</div>
+				</div> */}
 
 				{/* Single project objectives */}
-				<div className="mb-7">
+				{/* <div className="mb-7">
 					<p className="font-general-regular text-2xl font-semibold text-ternary-dark dark:text-ternary-light mb-2">
 						{singleProjectData.ProjectInfo.ObjectivesHeading}
 					</p>
 					<p className="font-general-regular text-primary-dark dark:text-ternary-light">
 						{singleProjectData.ProjectInfo.ObjectivesDetails}
 					</p>
-				</div>
+				</div> */}
 
 				{/* Single project technologies */}
 				<div className="mb-7">
@@ -58,6 +104,12 @@ const ProjectInfo = ({singleProjectData}) => {
 						{singleProjectData.ProjectInfo.Technologies[0].techs.join(
 							', '
 						)}
+						{/* {singleProjectData.ProjectInfo.Technologies[0].techs.map((tech, index, arr) => (
+							<span key={tech} style={{backgroundColor: 'gray'}} className='px-4 py-1 text-sm text-white rounded-lg mr-2 mb-2 inline-block bg-gray-900'>
+								{tech}
+							</span>
+						))
+					} */}
 					</p>
 				</div>
 
@@ -67,7 +119,8 @@ const ProjectInfo = ({singleProjectData}) => {
 						{singleProjectData.ProjectInfo.SocialSharingHeading}
 					</p>
 					<div className="flex items-center gap-3 mt-5">
-						{singleProjectData.ProjectInfo.SocialSharing.map(
+						{/* {singleProjectData.ProjectInfo.SocialSharing.map( */}
+						{socialMediaList.map(
 							(social) => {
 								return (
 									<a
